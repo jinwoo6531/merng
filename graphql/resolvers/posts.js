@@ -11,7 +11,7 @@ module.exports = {
       }
     },
 
-    async getPost(_, { postId }) {
+    getPost: async (_, { postId }) => {
       try {
         const post = await Post.findById(postId);
         if (post) {
@@ -19,9 +19,14 @@ module.exports = {
         } else {
           throw new Error('Post not found');
         }
-      } catch (error) {
-        throw new Error(error);
+      } catch (err) {
+        throw new Error(err);
       }
+    },
+  },
+  Mutation: {
+    async createPost(_, { body }, context) {
+        
     },
   },
 };
