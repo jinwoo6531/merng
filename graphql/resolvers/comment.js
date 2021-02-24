@@ -12,7 +12,7 @@ module.exports = {
           },
         });
       }
-
+      //호출
       const post = await Post.findById(postId);
 
       if (post) {
