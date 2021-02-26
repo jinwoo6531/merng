@@ -40,7 +40,7 @@ module.exports = {
           await post.save();
           return post;
         } else {
-          throw new AuthenticationError('Action not allowed');
+          throw new AuthenticationError('Action not allowed'); //asd
         }
       }
     },
