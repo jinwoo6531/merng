@@ -50,7 +50,7 @@ module.exports = {
           await post.delete();
           return 'Post deleted successfully';
         } else {
-          throw new AuthenticationError('Action not allowed');
+          throw new AuthenticationError('Action not allowed');//AuthenticationError 찾아보기
         }
       } catch (err) {
         throw new Error(err);
